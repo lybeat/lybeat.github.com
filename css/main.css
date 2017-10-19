@@ -226,51 +226,51 @@ h6 {
   margin: 20px 0 15px;
 }
 h1 {
-  font-size: 22px;
+  font-size: 24px;
 }
 @media (max-width: 767px) {
   h1 {
-    font-size: 18px;
+    font-size: 20px;
   }
 }
 h2 {
-  font-size: 20px;
+  font-size: 22px;
 }
 @media (max-width: 767px) {
   h2 {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 h3 {
-  font-size: 18px;
+  font-size: 20px;
 }
 @media (max-width: 767px) {
   h3 {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 h4 {
-  font-size: 16px;
+  font-size: 18px;
 }
 @media (max-width: 767px) {
   h4 {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 h5 {
-  font-size: 14px;
+  font-size: 16px;
 }
 @media (max-width: 767px) {
   h5 {
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 h6 {
-  font-size: 12px;
+  font-size: 14px;
 }
 @media (max-width: 767px) {
   h6 {
-    font-size: 8px;
+    font-size: 10px;
   }
 }
 p {
@@ -1090,13 +1090,12 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: url("../image/background.jpg");
+  background: url("https://i.loli.net/2017/10/19/59e8a57b82445.jpg");
 }
 .header-inner {
   position: relative;
 }
 .headband {
-  height: 3px;
   background: #222;
 }
 .site-meta {
@@ -1113,7 +1112,7 @@ pre .javascript .function {
   display: inline-block;
   padding: 0 40px;
   color: #fff;
-  background: #222;
+  background: transparent;
   border-bottom: none;
 }
 .brand:hover {
@@ -1185,7 +1184,7 @@ pre .javascript .function {
   }
 }
 .menu {
-  margin-top: 20px;
+  margin-top: 40px;
   padding-left: 0;
   text-align: center;
 }
@@ -1202,6 +1201,7 @@ pre .javascript .function {
 .menu .menu-item a {
   display: block;
   font-size: 13px;
+  color: #eee;
   line-height: inherit;
   border-bottom: 1px solid transparent;
   transition-property: border-color;
@@ -1210,7 +1210,7 @@ pre .javascript .function {
   transition-delay: 0s;
 }
 .menu .menu-item a:hover {
-  border-bottom-color: #222;
+  border-bottom-color: #eee;
 }
 .menu .menu-item .fa {
   margin-right: 5px;
@@ -1267,7 +1267,7 @@ pre .javascript .function {
   opacity: 0;
 }
 .posts-expand {
-  padding-top: 40px;
+  padding-top: 80px;
 }
 @media (max-width: 767px) {
   .posts-expand {
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #533efe;
+  background: #58ecff;
 }
 .links-of-blogroll {
   font-size: 13px;
