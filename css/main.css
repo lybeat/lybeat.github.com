@@ -1090,7 +1090,7 @@ pre .javascript .function {
   bottom: 19px;
 }
 .header {
-  background: url("https://i.loli.net/2017/10/20/59e98eca499ad.jpg");
+  background: url("https://i.loli.net/2017/10/20/59e98eca499ad.jpg") top center;
 }
 .header-inner {
   position: relative;
@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #9ee212;
+  background: #ff4213;
 }
 .links-of-blogroll {
   font-size: 13px;
