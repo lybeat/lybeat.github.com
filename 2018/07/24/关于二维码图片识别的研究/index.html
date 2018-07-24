@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android,Kotlin," />
+  <meta name="keywords" content="Android,zxing,zbar,二维码识别," />
 
 
 
@@ -79,20 +79,20 @@
 
 
 
-<meta name="description" content="前言在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。 之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。">
-<meta name="keywords" content="Android,Kotlin">
+<meta name="description" content="前言如今二维码图片处处可见，形形色色的App，支持二维码扫码和识别的不在少数。最近研究了一下二维码图片的识别以及提高识别率的方法。">
+<meta name="keywords" content="Android,zxing,zbar,二维码识别">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Kotlin开发一个追番应用">
-<meta property="og:url" content="http://arturia.com/2017/11/14/使用Kotlin开发一个追番应用/index.html">
+<meta property="og:title" content="关于二维码图片识别的研究">
+<meta property="og:url" content="http://arturia.com/2018/07/24/关于二维码图片识别的研究/index.html">
 <meta property="og:site_name" content="代码里面有魔法">
-<meta property="og:description" content="前言在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。 之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。">
+<meta property="og:description" content="前言如今二维码图片处处可见，形形色色的App，支持二维码扫码和识别的不在少数。最近研究了一下二维码图片的识别以及提高识别率的方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/02/09/5a7d037452c59.png">
-<meta property="og:updated_time" content="2018-02-09T02:20:26.000Z">
+<meta property="og:image" content="https://i.loli.net/2018/07/24/5b569085633fc.png">
+<meta property="og:updated_time" content="2018-07-24T02:37:47.812Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Kotlin开发一个追番应用">
-<meta name="twitter:description" content="前言在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。 之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。">
-<meta name="twitter:image" content="https://i.loli.net/2018/02/09/5a7d037452c59.png">
+<meta name="twitter:title" content="关于二维码图片识别的研究">
+<meta name="twitter:description" content="前言如今二维码图片处处可见，形形色色的App，支持二维码扫码和识别的不在少数。最近研究了一下二维码图片的识别以及提高识别率的方法。">
+<meta name="twitter:image" content="https://i.loli.net/2018/07/24/5b569085633fc.png">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://arturia.com/2017/11/14/使用Kotlin开发一个追番应用/"/>
+  <link rel="canonical" href="http://arturia.com/2018/07/24/关于二维码图片识别的研究/"/>
 
 
 
 
 
-  <title>使用Kotlin开发一个追番应用 | 代码里面有魔法</title>
+  <title>关于二维码图片识别的研究 | 代码里面有魔法</title>
   
 
 
@@ -275,7 +275,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://arturia.com/2017/11/14/使用Kotlin开发一个追番应用/">
+    <link itemprop="mainEntityOfPage" href="http://arturia.com/2018/07/24/关于二维码图片识别的研究/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arturia">
@@ -292,7 +292,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用Kotlin开发一个追番应用</h1>
+          <h1 class="post-title" itemprop="name headline">关于二维码图片识别的研究</h1>
         
 
         <div class="post-meta">
@@ -301,8 +301,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T18:36:35+08:00">
-                2017-11-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-24T10:27:41+08:00">
+                2018-07-24
               </time>
             
 
@@ -314,8 +314,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-02-09T10:20:26+08:00">
-                2018-02-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-24T10:37:47+08:00">
+                2018-07-24
               </time>
             
           </span>
@@ -330,8 +330,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/活跃工程/" itemprop="url" rel="index">
-                    <span itemprop="name">活跃工程</span>
+                  <a href="/categories/Android/" itemprop="url" rel="index">
+                    <span itemprop="name">Android</span>
                   </a>
                 </span>
 
@@ -347,7 +347,7 @@
 
           
           
-             <span id="/2017/11/14/使用Kotlin开发一个追番应用/" class="leancloud_visitors" data-flag-title="使用Kotlin开发一个追番应用">
+             <span id="/2018/07/24/关于二维码图片识别的研究/" class="leancloud_visitors" data-flag-title="关于二维码图片识别的研究">
                <span class="post-meta-divider">|</span>
                
                  <span class="post-meta-item-text">阅读次数</span>
@@ -375,26 +375,78 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。</p>
-<p>之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。</p>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>如今二维码图片处处可见，形形色色的App，支持二维码扫码和识别的不在少数。最近研究了一下二维码图片的识别以及提高识别率的方法。</p>
 <a id="more"></a>
-<h2 id="开发前的想法"><a href="#开发前的想法" class="headerlink" title="开发前的想法"></a>开发前的想法</h2><p>先学习一下Kotlin的基本语法。学习中…</p>
-<p>好了，没错，就是这么快（骄傲脸）。这就是我喜欢Kotlin的原因。具体的学习资料可以参考<a href="http://kotlinlang.org" target="_blank" rel="external">http://kotlinlang.org</a></p>
-<p>不过还是得在实际项目中使用才能理解的更加深入呢！做什么好呢？向我这种满脑子都是二次元的人，果然是想不到别的了，只能是ACG相关的呀！正好，最近老是为了追番发愁，各个平台都不齐啊，也没个比较好的软件可以使用，所以，自己做一个好了。于是呢，有了这个追番应用。</p>
-<p>对了，应用就叫Astolfo吧（人活着就是为了阿福.jpg）</p>
-<p>功能不必太多，就以下几个模块吧</p>
+<h2 id="关于二维码识别"><a href="#关于二维码识别" class="headerlink" title="关于二维码识别"></a>关于二维码识别</h2><p>说起二维码识别，最知名的库应该就是zxing了吧。大多数应用似乎都是采用zxing来实现二维码功能的。zxing是Google推出的一个针对二维码、条形码识别的第三方库。这个库比较杂，支持的功能也比较多，Google也没有提供一份详细的文档，对于想要研究zxing来说，平添了不少麻烦。但是常用的功能比较少，主要就是二维码、条形码扫描，二维码图片识别，生成二维码。这篇文章主要是研究二维码图片识别，以及如何提高识别精度。</p>
+<h2 id="使用zxing"><a href="#使用zxing" class="headerlink" title="使用zxing"></a>使用zxing</h2><p>zxing的github地址：<a href="https://github.com/zxing/zxing。" target="_blank" rel="external">https://github.com/zxing/zxing。</a><br>首先在gradle中引入zxing核心库：<br>api ‘com.google.zxing:android-core:3.3.0’<br>api ‘com.google.zxing:core:3.3.2<br>然后zxing的android包下载下来，通过module的方式引入到AS中。<br><img src="https://i.loli.net/2018/07/24/5b569085633fc.png" alt="zxing的android包.png"><br>以上是zxing android包的目录，可以看到，相关类还是很多的。但我们通常使用不到这么多功能。可以按自己的需求做相应的修改。这里我直接修改CaptureActivity来实现二维码图片识别。CaptureActivity中已经实现了二维码扫码的功能，可以自行研究。</p>
+<p>/**</p>
+<ul>
+<li>打开系统相册<br><em>/<br>private void discernPicture() {<br> Intent innerIntent = new Intent(Intent.ACTION_GET_CONTENT);<br> innerIntent.setType(“image/</em>“);<br> startActivityForResult(innerIntent, REQUEST_CODE_SCAN_GALLERY);<br>}</li>
+</ul>
+<p>@Override<br>public void onActivityResult(int requestCode, int resultCode, Intent intent) {<br>    if (resultCode == Activity.RESULT_OK) {<br>        switch (requestCode) {<br>            case REQUEST_CODE_SCAN_GALLERY:<br>                handlePicture(intent);<br>                break;<br>        }<br>    }<br>}</p>
+<p>/**</p>
+<ul>
+<li>扫描图片中的二维码</li>
+<li>@param path</li>
+<li>@return<br>*/<br>private Result scanQRCode(String path) {<br> if (TextUtils.isEmpty(path)) {<pre><code>return null;
+</code></pre> }<br> Hashtable<decodehinttype, object=""> hints = new Hashtable&lt;&gt;();<br> // 设置二维码内容的编码<br> hints.put(DecodeHintType.CHARACTER_SET, “UTF8”);<br> hints.put(DecodeHintType.TRY_HARDER, Boolean.TRUE);<br> hints.put(DecodeHintType.POSSIBLE_FORMATS, BarcodeFormat.QR_CODE);<br> // 只针对QR解码<br> Bitmap scanBitmap = decodeSampledBitmapFromFile(path, 512, 512);<br> // 获取bitmap的宽高，像素矩阵<br> int width = scanBitmap.getWidth();<br> int height = scanBitmap.getHeight();<br> int[] pixels = new int[width * height];<br> scanBitmap.getPixels(pixels, 0, width, 0, 0, width, height);<br> RGBLuminanceSource source = new RGBLuminanceSource(width, height, pixels);<br> BinaryBitmap bitmap1 = new BinaryBitmap(new HybridBinarizer(source));<br> QRCodeReader reader = new QRCodeReader();<br> try {<pre><code>return reader.decode(bitmap1, hints);
+</code></pre> } catch (NotFoundException e) {<pre><code>e.printStackTrace();
+</code></pre> } catch (FormatException e) {<pre><code>e.printStackTrace();
+</code></pre> } catch (ChecksumException e) {<pre><code>e.printStackTrace();
+</code></pre> }<br> return null;<br>}</decodehinttype,></li>
+</ul>
+<p>/**</p>
+<ul>
+<li>根据uri获取路径</li>
+<li>@param intent</li>
+<li>@return<br>*/<br>private String getPathByUri(Intent intent) {<br> Uri uri = intent.getData();<br> if (uri == null) {<pre><code>return &quot;&quot;;
+</code></pre> }<br> String path = “”;<br> if (DocumentsContract.isDocumentUri(this, uri)) {<pre><code>String docId = DocumentsContract.getDocumentId(uri);
+if (&quot;com.android.providers.media.documents&quot;.equals(uri.getAuthority())) {
+    String id = docId.split(&quot;:&quot;)[1];
+    String selection = MediaStore.Images.Media._ID + &quot;=&quot; + id;
+    path = getImagePath(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, selection);
+} else if (&quot;com.android.providers.downloads.documents&quot;.equals(uri.getAuthority())) {
+    Uri contentUri = ContentUris.withAppendedId(Uri.parse(&quot;content://downloads/public_downloads&quot;), Long.valueOf(docId));
+    path = getImagePath(contentUri, &quot;&quot;);
+}
+</code></pre> } else if (“content”.equals(uri.getScheme())) {<pre><code>path = getImagePath(uri, &quot;&quot;);
+</code></pre> } else if (“file”.equals(uri.getScheme())) {<pre><code>path = uri.getPath();
+</code></pre> }<br> Log.i(“@@@#”, “path: “ + path);<br> return path;<br>}</li>
+</ul>
+<p>private String getImagePath(Uri uri, String selection) {<br>    String path = “”;<br>    Cursor cursor = getContentResolver().query(uri, null, selection, null, null);<br>    if (cursor != null) {<br>        if (cursor.moveToFirst()) {<br>            path = cursor.getString(cursor.getColumnIndex(MediaStore.Images.Media.DATA));<br>        }<br>        cursor.close();<br>    }<br>    return path;<br>}</p>
+<p>/**</p>
+<ul>
+<li>将图片根据压缩比压缩成固定宽高的Bitmap，实际解析的图片大小可能和#reqWidth、#reqHeight不一样。<br>*</li>
+<li>@param imgPath   图片地址</li>
+<li>@param reqWidth  需要压缩到的宽度</li>
+<li>@param reqHeight 需要压缩到的高度</li>
+<li>@return Bitmap<br>*/<br>public static Bitmap decodeSampledBitmapFromFile(String imgPath, int reqWidth, int reqHeight) {<br> // First decode with inJustDecodeBounds=true to check dimensions<br> final BitmapFactory.Options options = new BitmapFactory.Options();<br> options.inJustDecodeBounds = true;<br> BitmapFactory.decodeFile(imgPath, options);<br> // Calculate inSampleSize<br> options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);<br> // Decode bitmap with inSampleSize set<br> options.inJustDecodeBounds = false;<br> return BitmapFactory.decodeFile(imgPath, options);<br>}</li>
+</ul>
+<p>public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {<br>    // Raw height and width of image<br>    final int height = options.outHeight;<br>    final int width = options.outWidth;<br>    int inSampleSize = 1;<br>    if (height &gt; reqHeight || width &gt; reqWidth) {<br>        final int halfHeight = height / 2;<br>        final int halfWidth = width / 2;<br>        // Calculate the largest inSampleSize value that is a power of 2 and keeps both<br>        // height and width larger than the requested height and width.<br>        while ((halfHeight / inSampleSize) &gt; reqHeight &amp;&amp; (halfWidth / inSampleSize) &gt; reqWidth) {<br>            inSampleSize *= 2;<br>        }<br>    }<br>    return inSampleSize;<br>}</p>
+<p>以上就是使用zxing做二维码识别的的所有代码了，聚体步骤基本就是：</p>
 <ol>
-<li>每日放送</li>
-<li>排行榜</li>
-<li>热门标签</li>
-<li>番剧搜索</li>
-<li>番剧收藏</li>
-<li>番剧订阅</li>
+<li>打开系统相册；</li>
+<li>重写onActivityResult，并在这里处理图片；</li>
+<li>对图片做压缩，避免大图出现OOM；</li>
+<li>使用zxing的QRCodeReader来识别图片。</li>
 </ol>
-<p>嗯，先就这么多吧，我的需求暂时也就这几个。</p>
-<h2 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h2><p><img src="https://i.loli.net/2018/02/09/5a7d037452c59.png" alt="效果图"></p>
-<h2 id="就这么多啦"><a href="#就这么多啦" class="headerlink" title="就这么多啦"></a>就这么多啦</h2><p>项目还在开发中，功能暂时也就这点吧，之后的也会慢慢补上。这里不会放出跟技术相关的内容（整理起来很麻烦呀！），遇到的具体问题应该会在以后的文章中记录下来。本项目的全部源码都放在<a href="https://github.com/lybeat/Astolfo" target="_blank" rel="external">Github</a>上。</p>
-<p>对了对了，项目数据源都来自<a href="http://bangumi.tv/" target="_blank" rel="external">bangumi.tv</a>。</p>
+<p>其中，关于如何提高二维码图片的识别精度可以参考这篇博客<a href="https://iluhcm.com/2016/01/08/scan-qr-code-and-recognize-it-from-picture-fastly-using-zxing/。关于这边博客里介绍的几种的方式，我都有尝试，但效果并不明显。对于有遮挡和反光严重的图片，依然难以识别。这也许就是zxing的极限了吧。" target="_blank" rel="external">https://iluhcm.com/2016/01/08/scan-qr-code-and-recognize-it-from-picture-fastly-using-zxing/。关于这边博客里介绍的几种的方式，我都有尝试，但效果并不明显。对于有遮挡和反光严重的图片，依然难以识别。这也许就是zxing的极限了吧。</a><br>因此我也尝试了另外的库，希望来进一步提升识别精度。然后找到了zbar（目前了解的二维码识别库好像就这两个呢。。。）。</p>
+<h2 id="使用zbar"><a href="#使用zbar" class="headerlink" title="使用zbar"></a>使用zbar</h2><p>zbar是使用C语言编写，具有更好的跨平台性。不过该库上一次提交已经是6年前了，看来作者并没有继续更新维护的想法了吧。<br>既然zbar是C语言编写的，那我们就没法直接引用，需要先打成so包。不过github上也有不少已经打包的，倒不用我们自己再次打包了。这里我选择了android-zbar-sdk，地址：<a href="https://github.com/yanzhenjie/android-zbar-sdk。" target="_blank" rel="external">https://github.com/yanzhenjie/android-zbar-sdk。</a><br>在gradle中引入api ‘com.yanzhenjie.zbar:zbar:1.0.0’<br>相关代码：<br>/**</p>
+<ul>
+<li>通过zbar识别二维码图片</li>
+<li>@param data</li>
+<li>@param width</li>
+<li>@param height</li>
+<li><p>@return<br>*/<br>private String scanByZBar(byte[] data, int width, int height) {<br> Image barcode = new Image(width, height, “Y800”);<br> barcode.setData(data);<br> // Set the image capture area.<br> // barcode.setCrop(startX, startY, width, height);</p>
+<p> String qrCodeString = null;</p>
+<p> ImageScanner imageScanner = new ImageScanner();<br> int result = imageScanner.scanImage(barcode);<br> if (result != 0) {</p>
+<pre><code>SymbolSet symSet = imageScanner.getResults();
+for (Symbol sym : symSet)
+    qrCodeString = sym.getData();
+</code></pre><p> }<br> Toast.makeText(this, “zbar: “ + qrCodeString, Toast.LENGTH_SHORT).show();<br> return qrCodeString;<br>}</p>
+</li>
+</ul>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>通过测试，发现zbar的识别率的确要比zxing好上一点。<br>以上，便是关于二维码图片识别研究的全部内容。基本都是通俗易懂的东西，大多借用了第三方代码。关于详细的实现原理和算法研究可以参考以上我提到的两个网址。</p>
 
       
     </div>
@@ -414,7 +466,11 @@
           
             <a href="/tags/Android/" rel="tag"># Android</a>
           
-            <a href="/tags/Kotlin/" rel="tag"># Kotlin</a>
+            <a href="/tags/zxing/" rel="tag"># zxing</a>
+          
+            <a href="/tags/zbar/" rel="tag"># zbar</a>
+          
+            <a href="/tags/二维码识别/" rel="tag"># 二维码识别</a>
           
         </div>
       
@@ -427,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/19/放逐少女/" rel="next" title="放逐少女">
-                <i class="fa fa-chevron-left"></i> 放逐少女
+              <a href="/2017/11/29/Unity第三人称角色控制/" rel="next" title="Unity第三人称角色控制">
+                <i class="fa fa-chevron-left"></i> Unity第三人称角色控制
               </a>
             
           </div>
@@ -436,10 +492,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/29/Unity第三人称角色控制/" rel="prev" title="Unity第三人称角色控制">
-                Unity第三人称角色控制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +625,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发前的想法"><span class="nav-number">2.</span> <span class="nav-text">开发前的想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#看看效果吧"><span class="nav-number">3.</span> <span class="nav-text">看看效果吧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就这么多啦"><span class="nav-number">4.</span> <span class="nav-text">就这么多啦</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于二维码识别"><span class="nav-number">2.</span> <span class="nav-text">关于二维码识别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用zxing"><span class="nav-number">3.</span> <span class="nav-text">使用zxing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用zbar"><span class="nav-number">4.</span> <span class="nav-text">使用zbar</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#最后"><span class="nav-number">5.</span> <span class="nav-text">最后</span></a></li></ol></div>
             
 
           </div>
