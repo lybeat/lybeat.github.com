@@ -88,7 +88,7 @@
 <meta property="og:description" content="前言如今二维码图片处处可见，形形色色的App，支持二维码扫码和识别的不在少数。最近研究了一下二维码图片的识别以及提高识别率的方法。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/07/24/5b569085633fc.png">
-<meta property="og:updated_time" content="2018-07-24T02:37:47.812Z">
+<meta property="og:updated_time" content="2018-07-24T02:43:06.819Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于二维码图片识别的研究">
 <meta name="twitter:description" content="前言如今二维码图片处处可见，形形色色的App，支持二维码扫码和识别的不在少数。最近研究了一下二维码图片的识别以及提高识别率的方法。">
@@ -314,7 +314,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-07-24T10:37:47+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-07-24T10:43:06+08:00">
                 2018-07-24
               </time>
             
@@ -431,7 +431,7 @@ if (&quot;com.android.providers.media.documents&quot;.equals(uri.getAuthority())
 <li>使用zxing的QRCodeReader来识别图片。</li>
 </ol>
 <p>其中，关于如何提高二维码图片的识别精度可以参考这篇博客<a href="https://iluhcm.com/2016/01/08/scan-qr-code-and-recognize-it-from-picture-fastly-using-zxing/。关于这边博客里介绍的几种的方式，我都有尝试，但效果并不明显。对于有遮挡和反光严重的图片，依然难以识别。这也许就是zxing的极限了吧。" target="_blank" rel="external">https://iluhcm.com/2016/01/08/scan-qr-code-and-recognize-it-from-picture-fastly-using-zxing/。关于这边博客里介绍的几种的方式，我都有尝试，但效果并不明显。对于有遮挡和反光严重的图片，依然难以识别。这也许就是zxing的极限了吧。</a><br>因此我也尝试了另外的库，希望来进一步提升识别精度。然后找到了zbar（目前了解的二维码识别库好像就这两个呢。。。）。</p>
-<h2 id="使用zbar"><a href="#使用zbar" class="headerlink" title="使用zbar"></a>使用zbar</h2><p>zbar是使用C语言编写，具有更好的跨平台性。不过该库上一次提交已经是6年前了，看来作者并没有继续更新维护的想法了吧。<br>既然zbar是C语言编写的，那我们就没法直接引用，需要先打成so包。不过github上也有不少已经打包的，倒不用我们自己再次打包了。这里我选择了android-zbar-sdk，地址：<a href="https://github.com/yanzhenjie/android-zbar-sdk。" target="_blank" rel="external">https://github.com/yanzhenjie/android-zbar-sdk。</a><br>在gradle中引入api ‘com.yanzhenjie.zbar:zbar:1.0.0’<br>相关代码：<br>/**</p>
+<h2 id="使用zbar"><a href="#使用zbar" class="headerlink" title="使用zbar"></a>使用zbar</h2><p>zbar是使用C语言编写，具有更好的跨平台性。不过该库上一次提交已经是6年前了，看来作者并没有继续更新维护的想法了吧。<br>既然zbar是C语言编写的，那我们就没法直接引用，需要先打成so包。不过github上也有不少已经打包的，倒不用我们自己再次打包了。这里我选择了android-zbar-sdk，地址：<a href="https://github.com/yanzhenjie/android-zbar-sdk。" target="_blank" rel="external">https://github.com/yanzhenjie/android-zbar-sdk。</a><br>在gradle中引入api ‘com.yanzhenjie.zbar:zbar:1.0.0’<br>相关代码：<br>···<br>/**</p>
 <ul>
 <li>通过zbar识别二维码图片</li>
 <li>@param data</li>
@@ -443,7 +443,7 @@ if (&quot;com.android.providers.media.documents&quot;.equals(uri.getAuthority())
 <pre><code>SymbolSet symSet = imageScanner.getResults();
 for (Symbol sym : symSet)
     qrCodeString = sym.getData();
-</code></pre><p> }<br> Toast.makeText(this, “zbar: “ + qrCodeString, Toast.LENGTH_SHORT).show();<br> return qrCodeString;<br>}</p>
+</code></pre><p> }<br> Toast.makeText(this, “zbar: “ + qrCodeString, Toast.LENGTH_SHORT).show();<br> return qrCodeString;<br>}<br>···</p>
 </li>
 </ul>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>通过测试，发现zbar的识别率的确要比zxing好上一点。<br>以上，便是关于二维码图片识别研究的全部内容。基本都是通俗易懂的东西，大多借用了第三方代码。关于详细的实现原理和算法研究可以参考以上我提到的两个网址。</p>
