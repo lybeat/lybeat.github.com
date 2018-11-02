@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Unity,UGUI," />
+  <meta name="keywords" content="Unity,Audio," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="UGUI是U3D提供的一套快速且高效的创建UI系统的框架。平时U3D的学习都十分的零碎，没有系统的学习过UGUI，对UGUI的使用总是不够灵活。因此打算全面的总结一下UGUI的相关知识点和使用方法。这篇文章先介绍一下UGUI，以及一些基础的知识。">
-<meta name="keywords" content="Unity,UGUI">
+<meta name="description" content="音乐也是游戏开发中必不可少的一环，虽然平时在学习过程中写的一些Demo项目可能会有所忽略，但在正式发行的游戏中，音乐肯定是至关重要的。音乐是游戏与玩家交互的重要途径，使玩家更能沉浸于游戏之中。这篇文章介绍一下Unity的音频系统。">
+<meta name="keywords" content="Unity,Audio">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity的UI系统-UGUI">
-<meta property="og:url" content="http://arturia.com/2018/10/31/Unity的UI系统-UGUI/index.html">
+<meta property="og:title" content="Unity的音频系统-Audio">
+<meta property="og:url" content="http://arturia.com/2018/11/01/Unity的音频系统-Audio/index.html">
 <meta property="og:site_name" content="代码里面有魔法">
-<meta property="og:description" content="UGUI是U3D提供的一套快速且高效的创建UI系统的框架。平时U3D的学习都十分的零碎，没有系统的学习过UGUI，对UGUI的使用总是不够灵活。因此打算全面的总结一下UGUI的相关知识点和使用方法。这篇文章先介绍一下UGUI，以及一些基础的知识。">
+<meta property="og:description" content="音乐也是游戏开发中必不可少的一环，虽然平时在学习过程中写的一些Demo项目可能会有所忽略，但在正式发行的游戏中，音乐肯定是至关重要的。音乐是游戏与玩家交互的重要途径，使玩家更能沉浸于游戏之中。这篇文章介绍一下Unity的音频系统。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-10-31T10:28:06.494Z">
+<meta property="og:updated_time" content="2018-11-02T08:17:03.136Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unity的UI系统-UGUI">
-<meta name="twitter:description" content="UGUI是U3D提供的一套快速且高效的创建UI系统的框架。平时U3D的学习都十分的零碎，没有系统的学习过UGUI，对UGUI的使用总是不够灵活。因此打算全面的总结一下UGUI的相关知识点和使用方法。这篇文章先介绍一下UGUI，以及一些基础的知识。">
+<meta name="twitter:title" content="Unity的音频系统-Audio">
+<meta name="twitter:description" content="音乐也是游戏开发中必不可少的一环，虽然平时在学习过程中写的一些Demo项目可能会有所忽略，但在正式发行的游戏中，音乐肯定是至关重要的。音乐是游戏与玩家交互的重要途径，使玩家更能沉浸于游戏之中。这篇文章介绍一下Unity的音频系统。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://arturia.com/2018/10/31/Unity的UI系统-UGUI/"/>
+  <link rel="canonical" href="http://arturia.com/2018/11/01/Unity的音频系统-Audio/"/>
 
 
 
 
 
-  <title>Unity的UI系统-UGUI | 代码里面有魔法</title>
+  <title>Unity的音频系统-Audio | 代码里面有魔法</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://arturia.com/2018/10/31/Unity的UI系统-UGUI/">
+    <link itemprop="mainEntityOfPage" href="http://arturia.com/2018/11/01/Unity的音频系统-Audio/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arturia">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity的UI系统-UGUI</h1>
+          <h1 class="post-title" itemprop="name headline">Unity的音频系统-Audio</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-31T11:00:53+08:00">
-                2018-10-31
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-01T15:11:50+08:00">
+                2018-11-01
               </time>
             
 
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-31T18:28:06+08:00">
-                2018-10-31
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-02T16:17:03+08:00">
+                2018-11-02
               </time>
             
           </span>
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2018/10/31/Unity的UI系统-UGUI/" class="leancloud_visitors" data-flag-title="Unity的UI系统-UGUI">
+             <span id="/2018/11/01/Unity的音频系统-Audio/" class="leancloud_visitors" data-flag-title="Unity的音频系统-Audio">
                <span class="post-meta-divider">|</span>
                
                  <span class="post-meta-item-text">阅读次数</span>
@@ -373,28 +373,95 @@
       
 
       
-        <p>UGUI是U3D提供的一套快速且高效的创建UI系统的框架。平时U3D的学习都十分的零碎，没有系统的学习过UGUI，对UGUI的使用总是不够灵活。因此打算全面的总结一下UGUI的相关知识点和使用方法。这篇文章先介绍一下UGUI，以及一些基础的知识。</p>
+        <p>音乐也是游戏开发中必不可少的一环，虽然平时在学习过程中写的一些Demo项目可能会有所忽略，但在正式发行的游戏中，音乐肯定是至关重要的。音乐是游戏与玩家交互的重要途径，使玩家更能沉浸于游戏之中。这篇文章介绍一下Unity的音频系统。</p>
 <a id="more"></a>
-<h3 id="相关概念"><a href="#相关概念" class="headerlink" title="相关概念"></a>相关概念</h3><h4 id="The-Rect-Tool-矩形工具"><a href="#The-Rect-Tool-矩形工具" class="headerlink" title="The Rect Tool(矩形工具)"></a>The Rect Tool(矩形工具)</h4><p>为了方便布局，每个UI元素都会被表示为一个矩形。这个矩形可以使用工具栏中的Rect Tool在场景视图中操作。Rect Tool既可用于Unity的2D功能，也可用于UI，实际上甚至可用于3D对象。<br>Rect Tool可以用来移动、调整和旋转UI元素。使用UI时，通常最好保留设置为Pivot和Local。</p>
-<h4 id="Rect-Transform-矩形变换"><a href="#Rect-Transform-矩形变换" class="headerlink" title="Rect Transform(矩形变换)"></a>Rect Transform(矩形变换)</h4><p>Rect Transform是一个新的转换组件，不同于常规的Transform组件，它用于所有UI元素。<br>Rect变换具有与常规变换一样的位置，旋转和缩放属性，但它也具有宽度和高度，用于指定矩形的尺寸。</p>
-<h4 id="Pivot-枢纽"><a href="#Pivot-枢纽" class="headerlink" title="Pivot(枢纽)"></a>Pivot(枢纽)</h4><p>UI元素的旋转、尺寸、缩放都依赖于Pivot。当你在工具栏中选择了Pivot模式之后，就可以在场景视图中移动矩形的Pivot了。</p>
-<h4 id="Anchors-锚点"><a href="#Anchors-锚点" class="headerlink" title="Anchors(锚点)"></a>Anchors(锚点)</h4><p>矩形变换中有一个被称作锚点的布局概念。锚点在场景视图中显示为四个小三角形手柄，锚点信息也显示在检查器中 。锚点主要用于实现相对布局。<br>如果一个矩形变换有一个父矩形变换，那么子矩形变换可以通过各种方式锚点到父矩形变换。锚定还允许子矩形变换与它的父矩形变换的宽度或高度一起伸展。</p>
-<h4 id="Anchor-Preset-锚点预设"><a href="#Anchor-Preset-锚点预设" class="headerlink" title="Anchor Preset(锚点预设)"></a>Anchor Preset(锚点预设)</h4><p>在Inspector中，锚点预设(Anchor Preset)按钮可以在Rect Transform组件的左上角找到 。</p>
-<h3 id="Canvas-画布"><a href="#Canvas-画布" class="headerlink" title="Canvas(画布)"></a>Canvas(画布)</h3><p>Canvas是所有UI元素的根布局，所有UI元素必须放在Canvas区域内。<br>创建任意一个新的UI元素时，若窗口中不存在Canvas，则会自动生成一个Canvas，作为UI的根元素。</p>
-<h4 id="Render-Moders-渲染模式"><a href="#Render-Moders-渲染模式" class="headerlink" title="Render Moders(渲染模式)"></a>Render Moders(渲染模式)</h4><p>UGUI的渲染模式有三种：</p>
+<p>Unity的音频系统发展到现在已经比较完善，支持的功能包括全3D音效，实时混音，母带制作，混音器，快照，预定义效果等等。<br>嘛，说实在的，对于一个不懂音乐的人来说，这些概念真的是晦涩难懂，根本不清楚是什么，有啥用。所以还是搜了一些资料，先了解一下音乐方面的知识。</p>
+<ul>
+<li>混音：Audio Mixing，是音乐制作中的一个步骤，常常也会缩写成MIX。是把多种来源的声音，整合至一个立体音轨（Stereo）或单音音轨（Mono）中。</li>
+<li>母带：歌手在创作歌曲、选歌并练习完毕后，正式在录音棚原始录制的、经过编辑完毕的磁带（光盘），以用于复制、生产制作音像制品。</li>
+</ul>
+<p>唔，以上概念来自百度百科。虽然大致了解了一些概念，但感觉这对游戏里面使用音乐的用处不大呢。大概是我Level不够吧。还是抛开那些音乐方面的专业知识吧，先弄一下基础游戏音频。</p>
+<h4 id="支持的音频格式："><a href="#支持的音频格式：" class="headerlink" title="支持的音频格式："></a>支持的音频格式：</h4><table>
+<thead>
+<tr>
+<th>格式</th>
+<th style="text-align:center">后缀</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MPEG layer 3</td>
+<td style="text-align:center">.mp3</td>
+</tr>
+<tr>
+<td>Ogg Vorbis</td>
+<td style="text-align:center">.ogg</td>
+</tr>
+<tr>
+<td>Microsoft Wave</td>
+<td style="text-align:center">.wav</td>
+</tr>
+<tr>
+<td>Audio Interchange File Format</td>
+<td style="text-align:center">.aiff/.aif</td>
+</tr>
+<tr>
+<td>Ultimate Soundtracker module</td>
+<td style="text-align:center">.mod</td>
+</tr>
+<tr>
+<td>Impulse Tracker module</td>
+<td style="text-align:center">.it</td>
+</tr>
+<tr>
+<td>Scream Tracker module</td>
+<td style="text-align:center">.s3m</td>
+</tr>
+<tr>
+<td>FastTracker 2 module</td>
+<td style="text-align:center">.xm</td>
+</tr>
+</tbody>
+</table>
+<h4 id="AudioManager"><a href="#AudioManager" class="headerlink" title="AudioManager"></a>AudioManager</h4><p>音频管理器，通过Edti-&gt;Project Settings-&gt;Audio可以打开。这里可以配置整个游戏的音频属性。</p>
+<ul>
+<li><strong>Global Volume</strong>，全局播放的音量；</li>
+<li><strong>Volume Rolloff Scale</strong>，衰减因子，越大，声音衰减越快；</li>
+<li><strong>Doppler Factor</strong>，多普勒因子，模拟多普勒效应的监听效。0，关闭；1，高速物体的多普勒效应会比较明显的监听的到；</li>
+<li><strong>Default Speak Mode</strong>，设置扬声器模式;默认值为2(立体声, AudioSpeakModer)；</li>
+<li><strong>System Sample Rate</strong>，输出采样率；</li>
+<li><strong>DSP Buffer Size</strong>，调整DSP缓冲区大小优化延迟和性能，越大效果越好；</li>
+<li><strong>Max Virutal/Real Voices</strong>，同时播放的真实声音的数量；虚拟的声音最后会和其他的声音混合在一起，所以比真实的声音多；</li>
+<li><strong>Disable Unity Audio</strong>，是否使用音频；</li>
+<li><strong>Virtualize Effects</strong>，虚拟特效。</li>
+</ul>
+<h4 id="Audio-Source"><a href="#Audio-Source" class="headerlink" title="Audio Source"></a>Audio Source</h4><p>音频源会在场景中播放音频片段。可以按照以下步骤创建一个音频源：</p>
 <ol>
-<li>Screen Space - Overlay，此渲染模式将UI元素放置在场景顶部呈现的屏幕上，不受其他任何物体遮挡，即使没有摄像机也可以看到其内容。如果调整屏幕大小或更改分辨率，Canvas将自动更改大小以匹配此大小。Overlay模式使用Sort order排序，Sort order的值越大，越靠前渲染。如果在这个模式下，加入一些非UI的物体时，会使得排序混乱。</li>
-<li>Screen Space - Camera，顾名思义，此渲染模式与摄像头相关。在此模式下，Canvas被放置在Camera前面，UI元素的渲染会依赖这个Camera，这意味着Camera的设置将会影响到UI的效果。如果Camera是透视的，那UI元素也会被渲染成透视的。Canvas的尺寸也会随着Camera的改变而自动改变。</li>
-<li>World Space，这种模式下，Canvas会被渲染成场景中的对象。Canvas的大小可以使用其Rect变换手动设置，UI元素将会和场景中的其他对象相互影响。当你希望UI元素成为场景中的一部分时，这种渲染模式非常有用，这也被称为“叙事界面”。</li>
+<li>导入音频文件到工程中，会自动转换成Audio Clip；</li>
+<li>创建一个空对象，用作音频源的载体；</li>
+<li>在空对象上创建Audio Source；</li>
+<li>为Audio Source添加Audio Clip。</li>
 </ol>
-<h4 id="Canvas-Scaler"><a href="#Canvas-Scaler" class="headerlink" title="Canvas Scaler"></a>Canvas Scaler</h4><p>Canvas Scaler用来控制UI元素在Canvas上的缩放和像素密度。有三种可选方式：</p>
-<ol>
-<li>Constant Pixel Size，无论屏幕大小如何，UI元素都保持相同的像素大小。</li>
-<li>Scale With Screen Size，UI元素随着屏幕尺寸缩放</li>
-<li>Constant Physical Size，无论屏幕大小和分辨率如何，UI元素都保持相同的物理大小。</li>
-</ol>
-<h3 id="Visual-Components-可视化组件"><a href="#Visual-Components-可视化组件" class="headerlink" title="Visual Components(可视化组件)"></a>Visual Components(可视化组件)</h3><p><strong>Text</strong>，也称为标签。有一个可以显示输入文本的文本区域。Text可以设置字体、字体风格、字体大小和其他一些富文本功能。<br><strong>Image</strong>，由Rect Transform和Image脚本组成。可以在Image脚本中添加一个图片元素，并设置颜色和材质。<br><strong>Raw Image</strong>，添加的是一个Texture，而非Image中的图片。只有在必要时才应使用原始图像，否则图像将适用于​​大多数情况。<br><strong>Mask</strong>，不是可见的UI控件，而是一种修改控件子元素外观的方法。将子元素限制为父元素的形状。<br><strong>Effects</strong>，视觉组件也可以应用各种简单效果，例如简单的阴影或轮廓。</p>
-<h3 id="Interaction-Components-交互组件"><a href="#Interaction-Components-交互组件" class="headerlink" title="Interaction Components(交互组件)"></a>Interaction Components(交互组件)</h3><p>交互组件都具备一些共同点，它们都是可以被选中的，意味着都具有normal、highlighted、pressed、disabled的状态。交互组件至少拥有一个UnityEvent。<br><strong>Button</strong>，拥有一个OnClick事件，当Button被点击时，会回调该事件。Button包含一个Text组件，因此拥有Text组件的功能。Button还包含了Image脚本，可以设置图片。<br><strong>Toggle</strong>，有一个勾选框来指示当前的开关状态。它有一个OnValueChanged事件回调，当Toggle的勾选状态发生变化时。<br><strong>Toggle Group</strong>，由多个Toogle组成，Group中的Toggle同一时间只能有一个被选中。<br><strong>Slider</strong>，可以让用户通过拖动滑块来改变数值。当滑块对应的数值改变时，会回调OnValueChanged方法。<br><strong>Scrollbar</strong>，滑块组件，它的取值在0到1之间，可以被设置为水平或垂直。当取值改变时，会回调OnValueChanged方法。Scrollbar通常用来实现ScrollView。<br><strong>Dropdown</strong>，包含一个选项列表。每一个选项都可以添加一个文本和一张图片。更改当前选中项时，会回调OnValueChanged方法。<br><strong>Input Field</strong>，包含一个Placeholder和一个Text。Placeholder用来显示提示文本，Text用来显示输入的文本。当输入的文本发生变化时，会回调OnValueChanged方法；当输入结束时（焦点离开），会回调EndEdit方法。<br><strong>ScrollView</strong>，一个可滑动区域，它可以在一个较小的区域显示超过该区域的内容。</p>
+<p>属性</p>
+<ul>
+<li><strong>AudioClip</strong>，被播放的音频片段；</li>
+<li><strong>Output</strong>，声音可以通过音频监听器或音频混合器输出；</li>
+<li><strong>Mute</strong>，是否静音；</li>
+<li><strong>Bypass Effects</strong>，是否打开“旁路”特效；</li>
+<li><strong>Bypass Listener Effects</strong>，“旁路”特效监听器；</li>
+<li><strong>Bypass Reverb Zones</strong>，“旁路”混响；</li>
+<li><strong>Play On Awake</strong>，唤醒时是否播放；</li>
+<li><strong>Loop</strong>，是否循环播放；</li>
+<li><strong>Priority</strong>，播放的优先级；</li>
+<li><strong>Volume</strong>，音量大小；</li>
+<li><strong>Picth</strong>，音频播放速度对音高的影响；</li>
+<li><strong>Stereo Pan</strong>，声道，0，偏向左声道；1，偏向右声道；</li>
+<li><strong>Spatial Blend</strong>，空间混合，0为2D音效，1为3D音，2D音效不会做衰减；</li>
+<li><strong>Reverb Zone Mix</strong>，</li>
+</ul>
+<h4 id="Audio-Clip"><a href="#Audio-Clip" class="headerlink" title="Audio Clip"></a>Audio Clip</h4><p>当我们导入音乐到Unity中时，音乐文件会自动转换成Audio Clip对象。Audio Clip即可直接在Audio Source中使用了。</p>
+<h4 id="Audio-Listener"><a href="#Audio-Listener" class="headerlink" title="Audio Listener"></a>Audio Listener</h4><p>Audio Listener类似于一个麦克风设备，它接收该场景下的所有音频输入并通过计算机的麦克风输出。每个场景有且只能有一个Audio Listener，默认绑定在MainCamera上。</p>
+<h4 id="一个简单的音频播放实例"><a href="#一个简单的音频播放实例" class="headerlink" title="一个简单的音频播放实例"></a>一个简单的音频播放实例</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">void Start () &#123;</div><div class="line">    audioSource = GetComponent&lt;AudioSource&gt;();</div><div class="line">&#125;</div><div class="line"></div><div class="line">void Update () &#123;</div><div class="line">    // 播放背景音乐</div><div class="line">    if (Input.GetMouseButtonDown(0)) &#123;</div><div class="line">        if (audioSource.isPlaying)</div><div class="line">        &#123;</div><div class="line">            audioSource.Pause();</div><div class="line">        &#125;</div><div class="line">        else</div><div class="line">        &#123;</div><div class="line">            audioSource.Play();</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 播放按钮点击音效</div><div class="line">public void PlayStartSound()</div><div class="line">&#123;</div><div class="line">    audioSource.PlayOneShot(audioClip);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -414,7 +481,7 @@
           
             <a href="/tags/Unity/" rel="tag"># Unity</a>
           
-            <a href="/tags/UGUI/" rel="tag"># UGUI</a>
+            <a href="/tags/Audio/" rel="tag"># Audio</a>
           
         </div>
       
@@ -427,8 +494,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/07/24/关于二维码图片识别的研究/" rel="next" title="关于二维码图片识别的研究">
-                <i class="fa fa-chevron-left"></i> 关于二维码图片识别的研究
+              <a href="/2018/10/31/Unity的UI系统-UGUI/" rel="next" title="Unity的UI系统-UGUI">
+                <i class="fa fa-chevron-left"></i> Unity的UI系统-UGUI
               </a>
             
           </div>
@@ -436,10 +503,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/01/Unity的音频系统-Audio/" rel="prev" title="Unity的音频系统-Audio">
-                Unity的音频系统-Audio <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +636,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#相关概念"><span class="nav-number">1.</span> <span class="nav-text">相关概念</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#The-Rect-Tool-矩形工具"><span class="nav-number">1.1.</span> <span class="nav-text">The Rect Tool(矩形工具)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rect-Transform-矩形变换"><span class="nav-number">1.2.</span> <span class="nav-text">Rect Transform(矩形变换)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Pivot-枢纽"><span class="nav-number">1.3.</span> <span class="nav-text">Pivot(枢纽)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Anchors-锚点"><span class="nav-number">1.4.</span> <span class="nav-text">Anchors(锚点)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Anchor-Preset-锚点预设"><span class="nav-number">1.5.</span> <span class="nav-text">Anchor Preset(锚点预设)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Canvas-画布"><span class="nav-number">2.</span> <span class="nav-text">Canvas(画布)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Render-Moders-渲染模式"><span class="nav-number">2.1.</span> <span class="nav-text">Render Moders(渲染模式)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Canvas-Scaler"><span class="nav-number">2.2.</span> <span class="nav-text">Canvas Scaler</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Visual-Components-可视化组件"><span class="nav-number">3.</span> <span class="nav-text">Visual Components(可视化组件)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Interaction-Components-交互组件"><span class="nav-number">4.</span> <span class="nav-text">Interaction Components(交互组件)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#支持的音频格式："><span class="nav-number">1.</span> <span class="nav-text">支持的音频格式：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AudioManager"><span class="nav-number">2.</span> <span class="nav-text">AudioManager</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Audio-Source"><span class="nav-number">3.</span> <span class="nav-text">Audio Source</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Audio-Clip"><span class="nav-number">4.</span> <span class="nav-text">Audio Clip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Audio-Listener"><span class="nav-number">5.</span> <span class="nav-text">Audio Listener</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一个简单的音频播放实例"><span class="nav-number">6.</span> <span class="nav-text">一个简单的音频播放实例</span></a></li></ol></div>
             
 
           </div>
