@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Android,Kotlin," />
+  <meta name="keywords" content="Unity,Camera,2D游戏," />
 
 
 
@@ -79,20 +79,18 @@
 
 
 
-<meta name="description" content="前言在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。 之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。">
-<meta name="keywords" content="Android,Kotlin">
+<meta name="description" content="摄像机是游戏的基础。通过对摄像机的控制，我们可以实现很多常见的的特效，如角色跟随、锁定到特殊物品、缩放、屏幕抖动等等。在2D游戏中，因为只需要处理二维坐标，摄像机的控制相对3D游戏应该会简单一点。本文介绍了2D游戏中常用的摄像机控制和特效，但它们也是很容易扩展到3D游戏的。">
+<meta name="keywords" content="Unity,Camera,2D游戏">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用Kotlin开发一个追番应用">
-<meta property="og:url" content="http://arturia.com/2017/11/14/使用Kotlin开发一个追番应用/index.html">
+<meta property="og:title" content="Unity-2D游戏中的相机控制">
+<meta property="og:url" content="http://arturia.com/2018/11/09/Unity-2D游戏中的相机控制/index.html">
 <meta property="og:site_name" content="代码里面有魔法">
-<meta property="og:description" content="前言在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。 之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。">
+<meta property="og:description" content="摄像机是游戏的基础。通过对摄像机的控制，我们可以实现很多常见的的特效，如角色跟随、锁定到特殊物品、缩放、屏幕抖动等等。在2D游戏中，因为只需要处理二维坐标，摄像机的控制相对3D游戏应该会简单一点。本文介绍了2D游戏中常用的摄像机控制和特效，但它们也是很容易扩展到3D游戏的。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.loli.net/2018/02/09/5a7d037452c59.png">
-<meta property="og:updated_time" content="2018-02-09T02:20:26.000Z">
+<meta property="og:updated_time" content="2018-11-09T05:55:49.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用Kotlin开发一个追番应用">
-<meta name="twitter:description" content="前言在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。 之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。">
-<meta name="twitter:image" content="https://i.loli.net/2018/02/09/5a7d037452c59.png">
+<meta name="twitter:title" content="Unity-2D游戏中的相机控制">
+<meta name="twitter:description" content="摄像机是游戏的基础。通过对摄像机的控制，我们可以实现很多常见的的特效，如角色跟随、锁定到特殊物品、缩放、屏幕抖动等等。在2D游戏中，因为只需要处理二维坐标，摄像机的控制相对3D游戏应该会简单一点。本文介绍了2D游戏中常用的摄像机控制和特效，但它们也是很容易扩展到3D游戏的。">
 
 
 
@@ -122,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://arturia.com/2017/11/14/使用Kotlin开发一个追番应用/"/>
+  <link rel="canonical" href="http://arturia.com/2018/11/09/Unity-2D游戏中的相机控制/"/>
 
 
 
 
 
-  <title>使用Kotlin开发一个追番应用 | 代码里面有魔法</title>
+  <title>Unity-2D游戏中的相机控制 | 代码里面有魔法</title>
   
 
 
@@ -275,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://arturia.com/2017/11/14/使用Kotlin开发一个追番应用/">
+    <link itemprop="mainEntityOfPage" href="http://arturia.com/2018/11/09/Unity-2D游戏中的相机控制/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arturia">
@@ -292,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用Kotlin开发一个追番应用</h1>
+          <h1 class="post-title" itemprop="name headline">Unity-2D游戏中的相机控制</h1>
         
 
         <div class="post-meta">
@@ -301,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-14T18:36:35+08:00">
-                2017-11-14
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-09T13:37:34+08:00">
+                2018-11-09
               </time>
             
 
@@ -314,8 +312,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-02-09T10:20:26+08:00">
-                2018-02-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-09T13:55:49+08:00">
+                2018-11-09
               </time>
             
           </span>
@@ -330,8 +328,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/活跃工程/" itemprop="url" rel="index">
-                    <span itemprop="name">活跃工程</span>
+                  <a href="/categories/Unity/" itemprop="url" rel="index">
+                    <span itemprop="name">Unity</span>
                   </a>
                 </span>
 
@@ -347,7 +345,7 @@
 
           
           
-             <span id="/2017/11/14/使用Kotlin开发一个追番应用/" class="leancloud_visitors" data-flag-title="使用Kotlin开发一个追番应用">
+             <span id="/2018/11/09/Unity-2D游戏中的相机控制/" class="leancloud_visitors" data-flag-title="Unity-2D游戏中的相机控制">
                <span class="post-meta-divider">|</span>
                
                  <span class="post-meta-item-text">阅读次数</span>
@@ -375,26 +373,13 @@
       
 
       
-        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>在2017的Google I/O大会上，Google官方开始支持了使用Kotlin开发Android应用。</p>
-<p>之前对Kotlin有过一点了解，对于简洁的语法还是挺喜欢的，一直都有学习的想法来着，不过对于拖延症患者来说，开始不是一件轻松的事情哇！好在最近时间比较充裕，总算是下定决心来学习一下了。据说最新的Kotlin测试版本甚至可以支持IOS和Web开发，这不得不说也是一剂强心剂啊。</p>
+        <p>摄像机是游戏的基础。通过对摄像机的控制，我们可以实现很多常见的的特效，如角色跟随、锁定到特殊物品、缩放、屏幕抖动等等。在2D游戏中，因为只需要处理二维坐标，摄像机的控制相对3D游戏应该会简单一点。本文介绍了2D游戏中常用的摄像机控制和特效，但它们也是很容易扩展到3D游戏的。</p>
 <a id="more"></a>
-<h2 id="开发前的想法"><a href="#开发前的想法" class="headerlink" title="开发前的想法"></a>开发前的想法</h2><p>先学习一下Kotlin的基本语法。学习中…</p>
-<p>好了，没错，就是这么快（骄傲脸）。这就是我喜欢Kotlin的原因。具体的学习资料可以参考<a href="http://kotlinlang.org" target="_blank" rel="external">http://kotlinlang.org</a></p>
-<p>不过还是得在实际项目中使用才能理解的更加深入呢！做什么好呢？向我这种满脑子都是二次元的人，果然是想不到别的了，只能是ACG相关的呀！正好，最近老是为了追番发愁，各个平台都不齐啊，也没个比较好的软件可以使用，所以，自己做一个好了。于是呢，有了这个追番应用。</p>
-<p>对了，应用就叫Astolfo吧（人活着就是为了阿福.jpg）</p>
-<p>功能不必太多，就以下几个模块吧</p>
-<ol>
-<li>每日放送</li>
-<li>排行榜</li>
-<li>热门标签</li>
-<li>番剧搜索</li>
-<li>番剧收藏</li>
-<li>番剧订阅</li>
-</ol>
-<p>嗯，先就这么多吧，我的需求暂时也就这几个。</p>
-<h2 id="看看效果吧"><a href="#看看效果吧" class="headerlink" title="看看效果吧"></a>看看效果吧</h2><p><img src="https://i.loli.net/2018/02/09/5a7d037452c59.png" alt="效果图"></p>
-<h2 id="就这么多啦"><a href="#就这么多啦" class="headerlink" title="就这么多啦"></a>就这么多啦</h2><p>项目还在开发中，功能暂时也就这点吧，之后的也会慢慢补上。这里不会放出跟技术相关的内容（整理起来很麻烦呀！），遇到的具体问题应该会在以后的文章中记录下来。本项目的全部源码都放在<a href="https://github.com/lybeat/Astolfo" target="_blank" rel="external">Github</a>上。</p>
-<p>对了对了，项目数据源都来自<a href="http://bangumi.tv/" target="_blank" rel="external">bangumi.tv</a>。</p>
+<h4 id="跟随目标角色"><a href="#跟随目标角色" class="headerlink" title="跟随目标角色"></a>跟随目标角色</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">// 跟随的目标</div><div class="line">Transform trackTarget;</div><div class="line">// 摄像机相对于角色的偏移</div><div class="line">public float xOffset;</div><div class="line">public float yOffset;</div><div class="line">protected float followSpeed;</div><div class="line">// 方向锁定</div><div class="line">protected bool isXLocked = false;</div><div class="line">protected bool isYLocked = false;</div><div class="line"></div><div class="line">void Update ()</div><div class="line">&#123;</div><div class="line">   float xNew = transform.position.x;</div><div class="line">   if (!isXLocked)</div><div class="line">   &#123;</div><div class="line">     float xTarget = trackTarget.position.x + xOffset;</div><div class="line">     // 使相机可以平滑移动</div><div class="line">     xNew = Mathf.Lerp(transform.position.x, xTarget, Time.deltaTime * followSpeed);</div><div class="line">   &#125;</div><div class="line">   float yNew = transform.position.y;</div><div class="line">   if (!isYLocked)</div><div class="line">   &#123;</div><div class="line">     float yTarget = trackTarget.position.y + yOffset;</div><div class="line">     yNew = Mathf.Lerp(transform.position.y, yTarget, Time.deltaTime * followSpeed);</div><div class="line">   &#125;</div><div class="line">   transform.position = new Vector3(xNew, yNew, transform.position.z);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="锁定节点"><a href="#锁定节点" class="headerlink" title="锁定节点"></a>锁定节点</h4><p>有时我们需要让相机锁定在场景中的某个物体上面，即游戏场景中的“兴趣点”（POI）。<br>我们可以在场景中配置一个这样的POI对象，并在上面添加触发器碰撞体（Trigger Collider）来达到这一目的。不管什么时候，只要玩家角色进入了触发体区域，我们就把相机的焦点放在POI上。当角色离开碰撞体区域后，我们再恢复相机的正常行为。<br>相机追踪目标的切换通常有两种方法可以实现，一种是简单地进行切换，而另一种是使用栈系统，即将追踪模式push到栈中，再pop恢复。<br>这里只是简单的进行切换，相关代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div></pre></td><td class="code"><pre><div class="line">[SerializeField]</div><div class="line">Camera camera;</div><div class="line">[SerializeField]</div><div class="line">string tag;</div><div class="line"></div><div class="line">private Transform previousTarget;</div><div class="line">private TrackBehaviour trackBehaviour;</div><div class="line">private bool isLocked = false;</div><div class="line"></div><div class="line">void Start () &#123;</div><div class="line">  trackBehaviour = camera.GetComponent&lt;TrackBehaviour&gt;();</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void OnTriggerEnter2D(Collider2D collision)</div><div class="line">&#123;</div><div class="line">  if (collision.tag == tag &amp;&amp; !isLocked)</div><div class="line">  &#123;</div><div class="line">    isLocked = true;</div><div class="line">    PushTarget(collision.transform);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void OnTriggerExit2D(Collider2D collision)</div><div class="line">&#123;</div><div class="line">  if (collision.tag == tag &amp;&amp; isLocked)</div><div class="line">  &#123;</div><div class="line">    isLocked = false;</div><div class="line">    PopTarget();</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void PushTarget(Transform target)</div><div class="line">&#123;</div><div class="line">  previousTarget = trackBehaviour.TrackTarget;</div><div class="line">  trackBehaviour.TrackTarget = target;</div><div class="line">&#125;</div><div class="line"></div><div class="line">private void PopTarget()</div><div class="line">&#123;</div><div class="line">  trackBehaviour.TrackTarget = previousTarget;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="相机缩放"><a href="#相机缩放" class="headerlink" title="相机缩放"></a>相机缩放</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">float zoomFactor = 1.0f;</div><div class="line">float zoomSpeed = 5.0f;</div><div class="line">private float originalSize = 0f;</div><div class="line">private Camera camera;</div><div class="line"></div><div class="line">void Start ()</div><div class="line">&#123;</div><div class="line">  camera = GetComponent&lt;Camera&gt; ();</div><div class="line">  originalSize = camera.orthographicSize;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void Update ()</div><div class="line">&#123;</div><div class="line">  float targetSize = originalSize * zoomFactor;</div><div class="line">  if (targetSize != camera.orthographicSize)</div><div class="line">  &#123;</div><div class="line">    camera.orthographicSize = Mathf.Lerp(camera.orthographicSize, targetSize, Time.deltaTime * zoomSpeed);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">void setZoomFactor(float zoomFactor)</div><div class="line">&#123;</div><div class="line">  this.zoomFactor = zoomFactor;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="屏幕抖动"><a href="#屏幕抖动" class="headerlink" title="屏幕抖动"></a>屏幕抖动</h4><p>当游戏中遇到战斗、爆炸等场景时，屏幕抖动能够增强游戏的表现力，使玩家更能身临其境。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">private Vector3 shakePos = Vector3.zero;</div><div class="line">void Update () &#123;</div><div class="line">  if (Input.GetKey (KeyCode.Space))</div><div class="line">  &#123;</div><div class="line">    transform.localPosition -= shakePos;</div><div class="line">    shakePos = Random.insideUnitSphere / 5.0f;</div><div class="line">    transform.localPosition += shakePos;</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="淡入淡出"><a href="#淡入淡出" class="headerlink" title="淡入淡出"></a>淡入淡出</h4><p>游戏关卡开始或结束时，有时会需要淡入淡出效果。要实现这种效果，我们可以添加一个不可交互的UI纹理并让其覆盖整个屏幕。最开始时将纹理设为透明，然后填入任意颜色或改为任意透明度，使用动画来达到这种效果。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line">[SerializeField]</div><div class="line">Image overlay;</div><div class="line"></div><div class="line">[SerializeField]</div><div class="line">float fadeSpeed = 5f;</div><div class="line"></div><div class="line">[SerializeField]</div><div class="line">Color targetColor;</div><div class="line"></div><div class="line">void Update()</div><div class="line">&#123;</div><div class="line">  if (overlay.color != targetColor)</div><div class="line">  &#123;</div><div class="line">    overlay.color = Color.Lerp(overlay.color, targetColor, Time.deltaTime * fadeSpeed);</div><div class="line">  &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">public void SetOverlayColor(Color color)</div><div class="line">&#123;</div><div class="line">  targetColor = color;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -412,9 +397,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Android/" rel="tag"># Android</a>
+            <a href="/tags/Unity/" rel="tag"># Unity</a>
           
-            <a href="/tags/Kotlin/" rel="tag"># Kotlin</a>
+            <a href="/tags/Camera/" rel="tag"># Camera</a>
+          
+            <a href="/tags/2D游戏/" rel="tag"># 2D游戏</a>
           
         </div>
       
@@ -427,8 +414,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/10/19/放逐少女/" rel="next" title="放逐少女">
-                <i class="fa fa-chevron-left"></i> 放逐少女
+              <a href="/2018/11/05/Unity的相机系统-Camera/" rel="next" title="Unity的相机系统-Camera">
+                <i class="fa fa-chevron-left"></i> Unity的相机系统-Camera
               </a>
             
           </div>
@@ -436,10 +423,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/29/Unity第三人称角色控制/" rel="prev" title="Unity第三人称角色控制">
-                Unity第三人称角色控制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -573,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发前的想法"><span class="nav-number">2.</span> <span class="nav-text">开发前的想法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#看看效果吧"><span class="nav-number">3.</span> <span class="nav-text">看看效果吧</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#就这么多啦"><span class="nav-number">4.</span> <span class="nav-text">就这么多啦</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#跟随目标角色"><span class="nav-number">1.</span> <span class="nav-text">跟随目标角色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#锁定节点"><span class="nav-number">2.</span> <span class="nav-text">锁定节点</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相机缩放"><span class="nav-number">3.</span> <span class="nav-text">相机缩放</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#屏幕抖动"><span class="nav-number">4.</span> <span class="nav-text">屏幕抖动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#淡入淡出"><span class="nav-number">5.</span> <span class="nav-text">淡入淡出</span></a></li></ol></div>
             
 
           </div>
