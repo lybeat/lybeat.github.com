@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Unity,Camera," />
+  <meta name="keywords" content="Unity,RPG," />
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="Camera就是游戏中的眼睛，有了它，才能将丰富的游戏画面呈现到玩家面前。在之前关于角色控制的文章中，其实已经涉及到了摄像机的控制，不过只是做了一个摄像机跟随角色的简单操作。这篇文章会介绍一下摄像机的基础属性，在以后的文章中会更加系统的记录更多的摄像机控制、特效等。">
-<meta name="keywords" content="Unity,Camera">
+<meta name="description" content="学习Unity也有一段时间了，但是记录下来的东西并不多。不少东西回过头来就又忘了，好气呀！所以，计划开一个大坑，记录做一个比较完整的RPG需要的知识点，以及所要做的内容吧。这篇文章先做个开端，罗列一下整个开发内容和步骤吧。整个时间应该比较长，所以应该是一个长篇系列吧。">
+<meta name="keywords" content="Unity,RPG">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Unity的相机系统-Camera">
-<meta property="og:url" content="http://arturia.com/2018/11/05/Unity的相机系统-Camera/index.html">
+<meta property="og:title" content="Unity开发一个完整的RPG-开篇">
+<meta property="og:url" content="http://arturia.com/2018/11/12/Unity开发一个完整的RPG-开篇/index.html">
 <meta property="og:site_name" content="代码里面有魔法">
-<meta property="og:description" content="Camera就是游戏中的眼睛，有了它，才能将丰富的游戏画面呈现到玩家面前。在之前关于角色控制的文章中，其实已经涉及到了摄像机的控制，不过只是做了一个摄像机跟随角色的简单操作。这篇文章会介绍一下摄像机的基础属性，在以后的文章中会更加系统的记录更多的摄像机控制、特效等。">
+<meta property="og:description" content="学习Unity也有一段时间了，但是记录下来的东西并不多。不少东西回过头来就又忘了，好气呀！所以，计划开一个大坑，记录做一个比较完整的RPG需要的知识点，以及所要做的内容吧。这篇文章先做个开端，罗列一下整个开发内容和步骤吧。整个时间应该比较长，所以应该是一个长篇系列吧。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-09T05:24:28.999Z">
+<meta property="og:updated_time" content="2018-11-12T02:25:33.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Unity的相机系统-Camera">
-<meta name="twitter:description" content="Camera就是游戏中的眼睛，有了它，才能将丰富的游戏画面呈现到玩家面前。在之前关于角色控制的文章中，其实已经涉及到了摄像机的控制，不过只是做了一个摄像机跟随角色的简单操作。这篇文章会介绍一下摄像机的基础属性，在以后的文章中会更加系统的记录更多的摄像机控制、特效等。">
+<meta name="twitter:title" content="Unity开发一个完整的RPG-开篇">
+<meta name="twitter:description" content="学习Unity也有一段时间了，但是记录下来的东西并不多。不少东西回过头来就又忘了，好气呀！所以，计划开一个大坑，记录做一个比较完整的RPG需要的知识点，以及所要做的内容吧。这篇文章先做个开端，罗列一下整个开发内容和步骤吧。整个时间应该比较长，所以应该是一个长篇系列吧。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://arturia.com/2018/11/05/Unity的相机系统-Camera/"/>
+  <link rel="canonical" href="http://arturia.com/2018/11/12/Unity开发一个完整的RPG-开篇/"/>
 
 
 
 
 
-  <title>Unity的相机系统-Camera | 代码里面有魔法</title>
+  <title>Unity开发一个完整的RPG-开篇 | 代码里面有魔法</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://arturia.com/2018/11/05/Unity的相机系统-Camera/">
+    <link itemprop="mainEntityOfPage" href="http://arturia.com/2018/11/12/Unity开发一个完整的RPG-开篇/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Arturia">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Unity的相机系统-Camera</h1>
+          <h1 class="post-title" itemprop="name headline">Unity开发一个完整的RPG-开篇</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-05T14:47:40+08:00">
-                2018-11-05
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-12T09:56:26+08:00">
+                2018-11-12
               </time>
             
 
@@ -312,8 +312,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-11-09T13:24:28+08:00">
-                2018-11-09
+              <time title="更新于" itemprop="dateModified" datetime="2018-11-12T10:25:33+08:00">
+                2018-11-12
               </time>
             
           </span>
@@ -345,7 +345,7 @@
 
           
           
-             <span id="/2018/11/05/Unity的相机系统-Camera/" class="leancloud_visitors" data-flag-title="Unity的相机系统-Camera">
+             <span id="/2018/11/12/Unity开发一个完整的RPG-开篇/" class="leancloud_visitors" data-flag-title="Unity开发一个完整的RPG-开篇">
                <span class="post-meta-divider">|</span>
                
                  <span class="post-meta-item-text">阅读次数</span>
@@ -373,26 +373,35 @@
       
 
       
-        <p>Camera就是游戏中的眼睛，有了它，才能将丰富的游戏画面呈现到玩家面前。在之前关于角色控制的文章中，其实已经涉及到了摄像机的控制，不过只是做了一个摄像机跟随角色的简单操作。这篇文章会介绍一下摄像机的基础属性，在以后的文章中会更加系统的记录更多的摄像机控制、特效等。</p>
+        <p>学习Unity也有一段时间了，但是记录下来的东西并不多。不少东西回过头来就又忘了，好气呀！所以，计划开一个大坑，记录做一个比较完整的RPG需要的知识点，以及所要做的内容吧。这篇文章先做个开端，罗列一下整个开发内容和步骤吧。整个时间应该比较长，所以应该是一个长篇系列吧。</p>
 <a id="more"></a>
-<h4 id="clear-flags"><a href="#clear-flags" class="headerlink" title="clear flags"></a>clear flags</h4><p>确定屏幕的哪一部分将被清除。每个摄像机在渲染它视图的时候都会缓存颜色和深度信息。绘制出来的图像中那部分没有被绘制到的部分是空白的，默认的情况下会显示天空盒的颜色。<br>当使用多个摄像机的时候，每个都在缓存中存放了它自己的颜色和深度信息，在每个相机渲染的时候会累积更多的数据。在场景中任何特定的摄像机渲染其视图的时候，可以指定清除标志来清除缓存信息中的不同部分。可选项有skybox,solid color,depth only和dont clear。</p>
-<ol>
-<li>Skybox，这是清除标志的默认设置。屏幕的任何空白部分都会显示摄像机的天空盒，如何当前摄像机没有设定天空盒，它会默认使用渲染设置中(Eidt-&gt;Render Settings)的天空盒。假如默认渲染设置中也没有设定天空盒，它会退而使用背景色。可以选择是否将一个天空盒组件添加到摄像机。</li>
-<li>Solid Color，屏幕的任何空白部分都会显示当前摄像机的背景色。</li>
-<li>Depth Only，如果想要绘制一个玩家的枪而不让它在环境中不被裁剪，可以设定一个深度为0的相机来绘制环境，同时另一个深度为1的相机单独绘制这个武器。武器相机的清除标志应该设置成Depth Only。这会保持环境的图形显示在屏幕上，但是丢弃所有关于每个对象处于3D空间什么位置的信息。当枪被绘制的时候，被绘制出来的不透明部分会完全覆盖现有的被绘制的环境图像，而不管枪离墙壁多近。</li>
-<li>Don’t clear，这个模式下不会清除颜色和深度缓存。这会导致下一帧会在上一帧的结果上进行绘制，这个模式在游戏中用得少，一般用于常规的shader中。不清除的话不过一会屏幕所有的空白区域都会被填满，完全看不出是什么东西。</li>
-</ol>
-<h4 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h4><p>在没有天空盒的时候，当所有的元素绘制完成后剩余屏幕的颜色，即那些没有被元素绘制到的屏幕区域显示的颜色。</p>
-<h4 id="Culling-Mask"><a href="#Culling-Mask" class="headerlink" title="Culling Mask"></a>Culling Mask</h4><p>用于来设定是否剔除处于某一层的对象。Unity场景中的每一个对象，都被分配了一个层，默认为“default”层。打开层级管理器可以看到初始状态下分配了8个层，即0-7层是已经被U3D使用，而”default”处于第0层。</p>
-<h4 id="Projection"><a href="#Projection" class="headerlink" title="Projection"></a>Projection</h4><p>摄像机的投影方式，有透视投影和正交投影两种。<br>正交投影：投影线垂直于投影面，也叫平行投影。<br>将摄像机设成正交投影，可以看到它变成了一个立方体。</p>
-<h4 id="Size"><a href="#Size" class="headerlink" title="Size"></a>Size</h4><p>当摄像机设成正交投影时，摄像机对应的那个长方体的大小。</p>
-<h4 id="Field-of-view"><a href="#Field-of-view" class="headerlink" title="Field of view"></a>Field of view</h4><p>视角，透视投影时才有的特性。视角越大，能看到的视野也越大，对应的焦距也越短。</p>
-<h4 id="Clipping-Planes"><a href="#Clipping-Planes" class="headerlink" title="Clipping Planes"></a>Clipping Planes</h4><p>裁剪平面，Near和Far指定了裁剪的区域范围，即在Near-Far范围之内的面将被裁剪掉，不进行渲染。远近裁剪平面和由Field Of view决定的平面一起构成一个椎体，被称为相机椎体或视椎体，完全处于该椎体之外的物体将会被剔除，这被称为椎体剔除。</p>
-<h4 id="Normalized-viewport-rect"><a href="#Normalized-viewport-rect" class="headerlink" title="Normalized viewport rect"></a>Normalized viewport rect</h4><p>指定如何将摄像机的视图绘制到屏幕坐标系上（取值范围为0-1）<br>X：摄像机视图在屏幕上被绘制的水平初始位置<br>Y：摄像机视图在屏幕上被绘制的垂直初始位置<br>W：摄像机视图输出图像占屏幕宽度的比例<br>H：摄像机视图输出图像占屏幕高度的比例<br>U3D屏幕的坐标系是以左下角为坐标原点，向右为X轴，向上为Y轴。</p>
-<h4 id="Depth"><a href="#Depth" class="headerlink" title="Depth"></a>Depth</h4><p>摄像机在绘制序列中的位置（层级）。有更大深度值的摄像机将会在深度值更小的摄像机上面绘制，即假如两个相机C1和C2，深度值分别为10和8，假如将摄像机设为在场景中可见，则C1会在C2的上层绘制，会把摄像机C2也绘制到图像中。</p>
-<h4 id="Rendering-Path"><a href="#Rendering-Path" class="headerlink" title="Rendering Path"></a>Rendering Path</h4><p>用于指定摄像机使用哪种渲染方法，有下面几种<br>Use Player Settings，摄像机会使用在玩家配置里面指定的渲染路径<br>Vertex Lit，所有被该摄像机渲染的对象都会被渲染成Vertex-Lit对象<br>Forward，所有的对象都会被渲染为一个材质对应一个通道<br>Deferred Lighting，所有的对象在没有光照的情况下绘制一次，然后在渲染队列的末端将所有对象的光照一起绘制，也就是所谓的“延迟光照”技术。</p>
-<h4 id="Target-Texture"><a href="#Target-Texture" class="headerlink" title="Target Texture"></a>Target Texture</h4><p>可以用于容纳摄像机视图输出的Render Texture对象的引用，设置这个引用将会禁止摄像机将视图绘制到屏幕</p>
-<h4 id="HDR"><a href="#HDR" class="headerlink" title="HDR"></a>HDR</h4><p>启用摄像机的高动态范围渲染（High Dynamic Range Rendering）</p>
+<p>RPG是常见的一种游戏类型了，整个流程也是十分成熟。以下内容是我整理归纳并拆解的RPG开发内容。</p>
+<h4 id="漫游系统"><a href="#漫游系统" class="headerlink" title="漫游系统"></a>漫游系统</h4><ul>
+<li>角色控制</li>
+<li>相机控制</li>
+</ul>
+<h4 id="战斗系统"><a href="#战斗系统" class="headerlink" title="战斗系统"></a>战斗系统</h4><ul>
+<li>角色动画</li>
+<li>碰撞检测</li>
+<li>战斗特效</li>
+</ul>
+<h4 id="怪物AI系统"><a href="#怪物AI系统" class="headerlink" title="怪物AI系统"></a>怪物AI系统</h4><ul>
+<li>自主活动</li>
+<li>简单战斗</li>
+</ul>
+<h4 id="背包系统"><a href="#背包系统" class="headerlink" title="背包系统"></a>背包系统</h4><ul>
+<li>个人仓库</li>
+<li>系统商店</li>
+</ul>
+<h4 id="剧情系统"><a href="#剧情系统" class="headerlink" title="剧情系统"></a>剧情系统</h4><ul>
+<li>剧情设计</li>
+<li>人物交互</li>
+</ul>
+<h4 id="成就奖励系统"><a href="#成就奖励系统" class="headerlink" title="成就奖励系统"></a>成就奖励系统</h4><ul>
+<li>打到怪物掉落奖品</li>
+<li>完成人物获取奖励</li>
+</ul>
+<p>暂时就是这些吧。当然这肯定不是RPG的全部内容，还有GUI、网络通信之类的不在其中吧。这也不会是最终的版本。随着开发的过程，这个内容也会不断补充和完善的。</p>
 
       
     </div>
@@ -412,7 +421,7 @@
           
             <a href="/tags/Unity/" rel="tag"># Unity</a>
           
-            <a href="/tags/Camera/" rel="tag"># Camera</a>
+            <a href="/tags/RPG/" rel="tag"># RPG</a>
           
         </div>
       
@@ -425,8 +434,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/11/01/Unity的音频系统-Audio/" rel="next" title="Unity的音频系统-Audio">
-                <i class="fa fa-chevron-left"></i> Unity的音频系统-Audio
+              <a href="/2018/11/09/Unity-2D游戏中的相机控制/" rel="next" title="Unity-2D游戏中的相机控制">
+                <i class="fa fa-chevron-left"></i> Unity-2D游戏中的相机控制
               </a>
             
           </div>
@@ -434,10 +443,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/11/09/Unity-2D游戏中的相机控制/" rel="prev" title="Unity-2D游戏中的相机控制">
-                Unity-2D游戏中的相机控制 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -571,7 +576,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#clear-flags"><span class="nav-number">1.</span> <span class="nav-text">clear flags</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Background"><span class="nav-number">2.</span> <span class="nav-text">Background</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Culling-Mask"><span class="nav-number">3.</span> <span class="nav-text">Culling Mask</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Projection"><span class="nav-number">4.</span> <span class="nav-text">Projection</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Size"><span class="nav-number">5.</span> <span class="nav-text">Size</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Field-of-view"><span class="nav-number">6.</span> <span class="nav-text">Field of view</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Clipping-Planes"><span class="nav-number">7.</span> <span class="nav-text">Clipping Planes</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Normalized-viewport-rect"><span class="nav-number">8.</span> <span class="nav-text">Normalized viewport rect</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Depth"><span class="nav-number">9.</span> <span class="nav-text">Depth</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Rendering-Path"><span class="nav-number">10.</span> <span class="nav-text">Rendering Path</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Target-Texture"><span class="nav-number">11.</span> <span class="nav-text">Target Texture</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HDR"><span class="nav-number">12.</span> <span class="nav-text">HDR</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#漫游系统"><span class="nav-number">1.</span> <span class="nav-text">漫游系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#战斗系统"><span class="nav-number">2.</span> <span class="nav-text">战斗系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#怪物AI系统"><span class="nav-number">3.</span> <span class="nav-text">怪物AI系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#背包系统"><span class="nav-number">4.</span> <span class="nav-text">背包系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#剧情系统"><span class="nav-number">5.</span> <span class="nav-text">剧情系统</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#成就奖励系统"><span class="nav-number">6.</span> <span class="nav-text">成就奖励系统</span></a></li></ol></div>
             
 
           </div>
